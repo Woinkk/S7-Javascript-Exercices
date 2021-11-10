@@ -5,5 +5,5 @@
  * @param {number} endTower 
  */
 function hanoi(nbDisks, startTower, endTower) {
-    
+    console.log('Test');
 }
