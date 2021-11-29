@@ -1,16 +1,9 @@
-function initWith(size, f) {    
-    let array = [];
-    console.log(f());
-    console.log(size);
-
-    //console.log(array.fill(f, f, size)); 
+function initWith(size, fun) {
+    let arr = [];
+    for(let i = 0; i < size; i++) arr.push(fun(i));
+    return arr;
 }
 
-
-
-const withZero = () => 0;
 const fromZero = index => index;
-const from42 = index => 42 + index;
-initWith(5, withZero); // => [0, 0, 0, 0, 0]
-initWith(5, fromZero); // => [0, 1, 2, 3, 4]
-initWith(5, from42); // => [42, 43, 44, 45, 46]
+let test = initWith(10, fromZero);
+console.log(test);
